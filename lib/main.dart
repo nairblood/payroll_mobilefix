@@ -11,7 +11,7 @@ class MyApp  extends StatelessWidget {
 
       //KALAU MAU GANTI PAGE 2 PILIH Vertivication(),
       //pilih page 1 Userpage(),
-  home: Userpage(),
+  home: Vertivication(),
       
     );
   }

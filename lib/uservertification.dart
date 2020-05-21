@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:payroll/userinout.dart';
 
 
 class Vertivication  extends StatelessWidget {
@@ -24,24 +24,34 @@ class Vertivication  extends StatelessWidget {
         image: AssetImage("img/backgroud.jpg"),
     fit:BoxFit.cover )),
 
-      
-
-
+    
 
        child:  Column(
         
               children: <Widget>[
 
+
     //back   
        Row(        
               children: <Widget>[
        Container(
+         
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
              color: Colors.lightBlueAccent,
               border: Border.all(color: Colors.lightBlueAccent)
+              
             ),
-            child: Icon(Icons.arrow_back , color: Colors.white,),
+            // child: Icon(Icons.arrow_back , 
+            // color: Colors.white,),
+            
+             child: IconButton(
+            icon: Icon(Icons.arrow_back),
+            color: Colors.white,
+            onPressed: () {
+            Navigator.pop(context);
+          },
+              ),
           ),
 
               ]
@@ -50,7 +60,7 @@ class Vertivication  extends StatelessWidget {
 
   //sepasi 
   Padding(
-    padding: EdgeInsets.only(bottom:120.0),
+    padding: EdgeInsets.only(bottom:90.0),
   ),
 
         //gambar logo           
@@ -239,10 +249,20 @@ ButtonTheme(
   height: 45.0,
   
   child: RaisedButton(
+    
     textColor: Colors.white,
     color: Colors.blue[900],
-    onPressed: () {},
+    //PINDAH SLIDE
+  onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>  Userpage()),
+            );
+          },
+
+
     child: Text("SUBMIT"),
+    
   ),
 )
 

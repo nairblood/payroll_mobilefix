@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:payroll/uservertification.dart';
+
 
 class Userpage extends StatelessWidget {
   
@@ -29,6 +31,9 @@ class Userpage extends StatelessWidget {
         
               children: <Widget>[
 
+  //               Padding(
+  //   padding: EdgeInsets.only(bottom:0.0),
+  // ),
 
        //back
        Row(        
@@ -39,7 +44,14 @@ class Userpage extends StatelessWidget {
              color: Colors.lightBlueAccent,
               border: Border.all(color: Colors.lightBlueAccent)
             ),
-            child: Icon(Icons.arrow_back , color: Colors.white,),
+           
+               child: IconButton(
+            icon: Icon(Icons.arrow_back),
+            color: Colors.white,
+            onPressed: () {
+            Navigator.pop(context);
+          },
+              )
           ),
 
               ]
@@ -48,7 +60,7 @@ class Userpage extends StatelessWidget {
 
   //sepasi 
   Padding(
-    padding: EdgeInsets.only(bottom:120.0),
+    padding: EdgeInsets.only(bottom:90.0),
   ),
 
         //gambar logo           
@@ -128,6 +140,7 @@ decoration: BoxDecoration(
                     textAlign: TextAlign.center,)),
               ),
             ),
+
           ),
 
         //note 
@@ -388,6 +401,7 @@ child: Row(
                          ),
                  //sing out tulis
                  Text('Sign Out',  style: TextStyle(fontSize: 12.0, color: Colors.black, fontFamily: 'RobotoBold', fontWeight: FontWeight.bold, ), ),
+                 
               ]   
            ),
 
